@@ -10,7 +10,7 @@
   in (buildAllSystems (
     system: let
       pkgs = nixpkgs.legacyPackages.${system};
-      root.formatter.${system} = pkgs.nixfmt-tree;
+      root.formatter.${system} = pkgs.callPackage ./formatter.nix {};
       votv = import ./VotV {inherit pkgs self;};
     in
       builtins.foldl' nixpkgs.lib.recursiveUpdate {} [root votv]

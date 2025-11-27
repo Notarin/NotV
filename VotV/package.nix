@@ -13,7 +13,7 @@ stdenv.mkDerivation {
     url = "https://archive.votv.zip/VDMR/a09b_0004.7z";
     hash = "sha256-hkdCssr4GgNxfzyT0bWjx8ys0p2WgNQsQJR9s3insoM=";
   };
-  buildInputs = [ p7zip ];
+  buildInputs = [p7zip];
 
   buildPhase = ''
     runHook preBuild
@@ -47,13 +47,13 @@ stdenv.mkDerivation {
       hash = "sha256-pEv5DMgCjNNXBvsNf8/hPiFMPeR0fz5OXLsOcBDWWao=";
     };
     exec = "votv";
-    categories = [ "Game" ];
+    categories = ["Game"];
   };
 
   meta = {
     homepage = "https://votv.dev/";
     description = "An early-access indie horror simulation video game";
-    maintainers = with lib.maintainers; [ notarin ];
+    maintainers = with lib.maintainers; [notarin];
     platforms = lib.platforms.linux;
     mainProgram = "votv";
   };
